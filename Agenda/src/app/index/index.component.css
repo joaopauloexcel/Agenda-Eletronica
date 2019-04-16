@@ -1,0 +1,33 @@
+@media(min-width: 700px){
+  h4, h5{
+    font-weight: bold;
+  }
+}
+@media(max-width: 700px){
+  h4, h5{
+    font-weight: bold;
+    font-size: 100%;
+  }
+  h4{
+    margin-top: 70px;
+  }
+}
+.card{
+    position:fixed;
+    top:70px;
+    left:0px;
+    width:100%;
+  }
+div#inicial{
+    background-image: url('../img/agenda.png');
+    background-repeat: no-repeat; 
+    background-size: 100%    
+  }
+.borda_texto{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+     color: #fffdd9;
+    }
+  .posicao{
+    margin-top: 200px;
+  }    

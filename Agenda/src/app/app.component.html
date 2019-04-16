@@ -1,0 +1,25 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary borda_texto"><!--menu fixo em todas as telas, com formatações css -->
+      <a class="navbar-brand pull-right"><!-- deixar a esquerda do menu a imagem pega da internet -->
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAgVBMVEX////3j48AAADF1N7h6/I3QEh8j6FxhZfL0ddiJynNRUXFPz/jcnLDz9j5kpLFNTX3+fvcZWXy2trb5Orv8/bS3uXn7fHL2OH79PTNWVnNXl7Xf3/GPDzDLCzUWlrziYnLS0uruMQZHSHKtbqId4aRgI5CO0HPQUAvFRbcj4/KT09Fzrx9AAACa0lEQVR4nO3d2U4CQRBGYVAWQdBRZmgXRMAF9f0fUI0x1nQTY6AF/uKcC2KoTMPn1VQIoXHkvcau38C/h1C/QxG+9Dz2YoS9Zd9fy54V9k/91Y+E04GvpolwcOarwQph01MI9UOoH0L9EOqHUD+E+iHUD6F+CPVDqB9C/RDqh1C/lUJfpcLpha/Sz578VRcuJ+femtQ+A35+eny49NXD49OzEbY73ZOGr066nTZC7RDqh1A/hPoh1A+hfgj1Q6gfQv0Q6odQv9zC4jiuMtNxMh2baZVM7cnJMOyjsESIECFChAgRIkSIECFChIcirEL108ffYWSFwY4+H61wFKrw/fzXoz05hOhS+6/bonD/QqgfQv0Q6odQP4T6rSEsyjg7TYblr5cWeQ7OK0xXAPM2s372NLQvu8XdYgOhyPaEECFChAgRIkSIECFChDsWiuyH46Q/T4tWNGvZHb+Mr2zZg+NL6y+bVSgWQv0Q6odQP4T6IdRvnfvSUZydJkN7+1gm03L9g2t3rVmF29stBLcn//shQoQIESJEiBAhQoQIEeYQiuyHRdIG01wHZxWKhVA/hPoh1A+hfgi32lVcjkPXEI5CnL3zToa17+Mfx1N75/16HTXLQdyn7el2Ev1AzJ1D4czUdylsmh9qmroU3psf20KIECFChAgRInQgbPoU+r/z3o/taZMNOJnWN+Cbem87EoqFUD+E+iHUD6F+CPVDqB9C/RDqh1A/hPoh1A+hfgj1WyFMv7ohXSoctnw1RCgfQv0Q6odQP4T6IdQPoX6HKJwPfTWPhZ2utzqx0GFWuGh7bGGEnkOoH0L93gHARNC8DtxCbQAAAABJRU5ErkJggg==">
+      </a>&nbsp;&nbsp;
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- Div do menu que conterá os links -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link"  routerLink="/index">HOME</a><!-- links por meio de rotas, não recarrega a página -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  routerLink="/contatos">CONTATOS</a>
+            </li>
+          </ul>
+        </div>
+  </nav>
+</header>
+<main class="mt-5 row d-flex justify-content-center"> <!-- O conteúdo principal estará aqui dentro -->
+  <router-outlet></router-outlet> <!-- Tag responsável por gerenciar as rotas, conforme configuração na app.routing.module.ts -->
+</main>
+
+<div id="rodape"> <!-- Rodapé fixo com estilo css-->
+  <label>by: João Paulo Silva &#8465;</label>
+</div>

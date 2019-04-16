@@ -1,0 +1,137 @@
+<div class="row d-flex justify-content-center mt-5">
+    <button  type="button" class="btn bg-primary text-white" (click)="newContato()">Novo +</button>
+</div>
+<div class="form-group mt-5">
+  <form id="corFundoForm" *ngIf="validaForm===true" (ngSubmit)="onSubmit()" class="mt-1">
+      <table class="table table-bordered table-striped table-responsive" style="text-align: center">
+          <tbody>
+              <div class="form-group mt-3">
+                  <label class="ml-5">Nome:&nbsp;</label>
+                  <input type="text" class="form_control" [(ngModel)]="contato.nome" name="nome"/><br>
+                  <label class="ml-5">Telefone:</label>
+                  <input type="tel" class="form_control" [(ngModel)]="contato.telefone" name="telefone"/><br>
+                  <label class="ml-5">Endereço:</label>
+                  <input type="text" class="form_control" [(ngModel)]="contato.endereco" name="endereco"/><br>
+              </div>                
+                <button type="submit" (click)="validaForm=true" class="btn btn-primary" >Salvar</button>
+                <button (click)="validaForm=false; validaList=true" class="btn btn-primary ml-2" >Cancelar</button><br><br>
+          </tbody>
+        </table>
+  </form>
+</div>
+<app-lista></app-lista>
+
+<!-- Modal Alterar 
+<div class="modal fade modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cliente</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input type="text" class="form-control" placeholder="Nome" name="nome" />
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" id="Masculino" class="form-check-input" type="radio" name="sexo" value="Masculino">
+              <label class="form-check-label" id="Masculino">
+                Masculino
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" id="Feminino" class="form-check-input" type="radio" name="sexo"  value="Feminino">
+              <label class="form-check-label" id="Feminino">
+                Feminino
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+              <label for="nascimento">Data Nascimento:</label>
+              <input type="date" class="form-control" placeholder="Data de Nascimento" name="nascimento"/>
+          </div>
+          <div class="form-group">
+              <label for="cidade">Cidade:</label>
+              <input class="form-control" type="text" placeholder="Cidade" name="cidade" />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        <button type="button" data-dismiss="modal" class="btn btn-success">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+<br>
+<form>
+    <div class="row">
+      <div class="col">
+        <label>Palavra-chave: </label>
+        <input type="text" id="busca" /> 
+        <label>Filtro:</label>
+        <select aria-placeholder="Filtro">
+          <option selected>--- Filtro ---</option>
+          <option>Nome</option>
+          <option>Telefone</option>
+          <option>Endereço</option>
+        </select>
+      </div>
+    </div>
+  </form>
+<br>
+<table *ngIf="contatos.length > 0" class="table table-bordered" style="text-align: center">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Endereço</th>
+      <th colspan="2" scope="col">Operações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contato of contatos">
+      <th>
+        <span>{{contato.nome}}</span>
+      </th>
+      <td>
+        <span>{{contato.telefone}}</span>
+      </td>
+      <td>
+        <span>{{contato.endereco}}</span>
+      </td>
+      <td>
+          <button class="btn btn-secondary"  data-toggle="modal" data-target=".modal">Alterar</button>
+      </td>
+      <td>
+          <button  class="btn btn-danger"  data-toggle="modal" data-target=".excluir" >Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<br>
+ Modal Excluir 
+<div class="modal fade excluir" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        Realmente deseja excluir o cliente?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Excluir</button>
+      </div>
+    </div>
+  </div>
+</div>-->

@@ -1,0 +1,37 @@
+<form id="corFundoForm" class="form-group mt-5">
+    <label class="mt-4 ml-3">Busca: 
+      <input [(ngModel)]="textoBusca" name="busca"><!--alimenta a variável que recebe a palvra-chave da busca-->
+    </label>
+    <select [(ngModel)]="textoFiltro" name="filtro" class="ml-3 mt-4"><!--Alimenta a variável que recebe o campo do filtro da busca-->
+      <option name="filtro" value="nome">Nome</option>
+      <option name="filtro" value="telefone" >Telefone</option>
+      <option name="filtro" value="endereco">Endereço</option>
+    </select>
+    <button  type="button" class="btn bg-primary text-white mb-2 ml-2 mr-2" (click)="Filter()">Buscar</button><!--Botão da busca que chama a função para filtrar-->
+</form>    
+  <div class="card mt-2 corForm">
+    <table class="table  table-striped" style="text-align: center">
+      <thead>
+        <tr></tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contato of contatos | async" id="largura"><!--laço que trará todos os registros nas linhas da tabela-->
+          <td>
+            <span>{{contato.nome}}</span><!--interpolação para trazer os dados da classe do componente-->
+          </td>
+          <td>
+            <span type="tel">{{contato.telefone}}</span>
+          </td>
+          <td>
+            <span>{{contato.endereco}}</span>
+          </td>
+          <td>
+              <button class="btn btn-success" (click)="edit(contato, contato.key)" >Alterar</button><!--Botão de Editar que chama o método edit -->
+          </td>
+          <td>
+              <button  class="btn btn-danger" (click)="delete(contato.key)" >Excluir</button><!--Botão que chama o método delete-->
+          </td>
+        </tr>
+      </tbody>    
+    </table>       
+</div>
